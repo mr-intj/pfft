@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>768</width>
+    <height>655</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Pfft</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>://images/22x22/pfft-logo.png</normaloff>://images/22x22/pfft-logo.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QWidget" name="gridLayoutWidget">
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QGraphicsView" name="graphicsView_wf_l_scale">
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QGraphicsView" name="graphicsView_wf_l_disp"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGraphicsView" name="graphicsView_wf_r_scale">
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QGraphicsView" name="graphicsView_wf_r_disp"/>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QGraphicsView" name="graphicsView_wf_time">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>24</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="gridLayoutWidget_2">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="1">
+         <widget class="QGraphicsView" name="graphicsView_sg_disp"/>
+        </item>
+        <item row="0" column="0">
+         <widget class="QGraphicsView" name="graphicsView_sg_scale">
+          <property name="maximumSize">
+           <size>
+            <width>32</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QScrollBar" name="horizontalScrollBar">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>768</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menuRecent">
+     <property name="title">
+      <string>Open Recent</string>
+     </property>
+     <addaction name="actionFile_OpenRecent"/>
+     <addaction name="separator"/>
+     <addaction name="actionFile_OpenRecent_Clear"/>
+    </widget>
+    <addaction name="actionFile_New"/>
+    <addaction name="actionFile_Open"/>
+    <addaction name="menuRecent"/>
+    <addaction name="separator"/>
+    <addaction name="actionFile_Save"/>
+    <addaction name="actionFile_SaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionFile_Close"/>
+    <addaction name="separator"/>
+    <addaction name="actionFile_PrintPreview"/>
+    <addaction name="actionFile_Print"/>
+    <addaction name="separator"/>
+    <addaction name="actionFile_Properties"/>
+    <addaction name="separator"/>
+    <addaction name="actionFile_Quit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Edit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="actionEdit_Undo"/>
+    <addaction name="actionEdit_Redo"/>
+    <addaction name="separator"/>
+    <addaction name="actionEdit_Cut"/>
+    <addaction name="actionEdit_Copy"/>
+    <addaction name="actionEdit_Paste"/>
+    <addaction name="actionEdit_Delete"/>
+    <addaction name="separator"/>
+    <addaction name="actionEdit_Preferences"/>
+   </widget>
+   <widget class="QMenu" name="menu_Select">
+    <property name="title">
+     <string>&amp;Select</string>
+    </property>
+    <addaction name="actionSelect_All"/>
+    <addaction name="actionSelect_None"/>
+    <addaction name="actionSelect_Invert"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <widget class="QMenu" name="menuZoom">
+     <property name="title">
+      <string>Zoom</string>
+     </property>
+     <addaction name="actionView_Zoom_Reset"/>
+     <addaction name="separator"/>
+     <addaction name="actionView_Zoom_ZoomOut"/>
+     <addaction name="actionView_Zoom_ZoomIn"/>
+     <addaction name="actionView_Zoom_Fit"/>
+     <addaction name="actionView_Zoom_ZoomToSelection"/>
+     <addaction name="separator"/>
+     <addaction name="actionView_Zoom_Other"/>
+    </widget>
+    <widget class="QMenu" name="menuToolbars">
+     <property name="title">
+      <string>Toolbars</string>
+     </property>
+     <addaction name="actionView_Toolbar_Default"/>
+     <addaction name="actionView_Toolbar_Editing"/>
+    </widget>
+    <addaction name="menuToolbars"/>
+    <addaction name="menuZoom"/>
+    <addaction name="actionView_FullScreen"/>
+    <addaction name="separator"/>
+    <addaction name="actionView_StatusBar"/>
+    <addaction name="actionView_Grid"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionHelp_About"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Edit"/>
+   <addaction name="menu_Select"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionFile_New"/>
+   <addaction name="actionFile_Open"/>
+   <addaction name="actionFile_Save"/>
+   <addaction name="separator"/>
+   <addaction name="actionEdit_Undo"/>
+   <addaction name="actionEdit_Redo"/>
+   <addaction name="separator"/>
+   <addaction name="actionEdit_Cut"/>
+   <addaction name="actionEdit_Copy"/>
+   <addaction name="actionEdit_Paste"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionFile_New">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/document-new.png</normaloff>://images/32x32/document-new.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionFile_Open">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/document-open.png</normaloff>://images/32x32/document-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent">
+   <property name="text">
+    <string>(dynamic)</string>
+   </property>
+   <property name="toolTip">
+    <string>(dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_Clear">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/edit-delete.png</normaloff>://images/32x32/edit-delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Clear History</string>
+   </property>
+  </action>
+  <action name="actionFile_Save">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/document-save.png</normaloff>://images/32x32/document-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionFile_SaveAs">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/document-save-as.png</normaloff>://images/32x32/document-save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save As...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionFile_Close">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/document-close.png</normaloff>://images/32x32/document-close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actionFile_PrintPreview">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/document-print-preview.png</normaloff>://images/32x32/document-print-preview.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print Preview</string>
+   </property>
+  </action>
+  <action name="actionFile_Print">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/document-print.png</normaloff>://images/32x32/document-print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionFile_Properties">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/document-properties.png</normaloff>://images/32x32/document-properties.png</iconset>
+   </property>
+   <property name="text">
+    <string>Properties</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Return</string>
+   </property>
+  </action>
+  <action name="actionFile_Quit">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/application-quit.png</normaloff>://images/32x32/application-quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionEdit_Undo">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/edit-undo.png</normaloff>://images/32x32/edit-undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionEdit_Redo">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/edit-redo.png</normaloff>://images/32x32/edit-redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionEdit_Cut">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/edit-cut.png</normaloff>://images/32x32/edit-cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionEdit_Copy">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/edit-copy.png</normaloff>://images/32x32/edit-copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionEdit_Paste">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/edit-paste.png</normaloff>://images/32x32/edit-paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionEdit_Delete">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/edit-clear.png</normaloff>://images/32x32/edit-clear.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionEdit_Preferences">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/edit-preferences.png</normaloff>://images/32x32/edit-preferences.png</iconset>
+   </property>
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+  </action>
+  <action name="actionSelect_All">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/edit-select-all.png</normaloff>://images/32x32/edit-select-all.png</iconset>
+   </property>
+   <property name="text">
+    <string>All</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="actionSelect_None">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/select-none.png</normaloff>://images/32x32/select-none.png</iconset>
+   </property>
+   <property name="text">
+    <string>None</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+A</string>
+   </property>
+  </action>
+  <action name="actionSelect_Invert">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/select-invert.png</normaloff>://images/32x32/select-invert.png</iconset>
+   </property>
+   <property name="text">
+    <string>Invert</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionView_Toolbar_Default">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Default</string>
+   </property>
+  </action>
+  <action name="actionView_Toolbar_Editing">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Editing</string>
+   </property>
+  </action>
+  <action name="actionView_FullScreen">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/view-fullscreen.png</normaloff>://images/32x32/view-fullscreen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Full Screen</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+  <action name="actionView_StatusBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Status Bar</string>
+   </property>
+  </action>
+  <action name="actionView_Grid">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Grid</string>
+   </property>
+  </action>
+  <action name="actionView_Zoom_ZoomIn">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/zoom-out.png</normaloff>://images/32x32/zoom-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl++</string>
+   </property>
+  </action>
+  <action name="actionView_Zoom_Reset">
+   <property name="text">
+    <string>Reset (1:1)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+0</string>
+   </property>
+  </action>
+  <action name="actionView_Zoom_ZoomOut">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/zoom-out.png</normaloff>://images/32x32/zoom-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actionView_Zoom_Fit">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/zoom-fit.png</normaloff>://images/32x32/zoom-fit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fit</string>
+   </property>
+  </action>
+  <action name="actionView_Zoom_ZoomToSelection">
+   <property name="text">
+    <string>Zoom to Selection</string>
+   </property>
+  </action>
+  <action name="actionView_Zoom_Other">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/zoom-other.png</normaloff>://images/32x32/zoom-other.png</iconset>
+   </property>
+   <property name="text">
+    <string>Other...</string>
+   </property>
+  </action>
+  <action name="actionHelp_About">
+   <property name="icon">
+    <iconset>
+     <normaloff>://images/32x32/help-about.png</normaloff>://images/32x32/help-about.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>graphicsView_wf_l_scale</tabstop>
+  <tabstop>graphicsView_wf_l_disp</tabstop>
+  <tabstop>graphicsView_wf_r_scale</tabstop>
+  <tabstop>graphicsView_wf_r_disp</tabstop>
+  <tabstop>graphicsView_wf_time</tabstop>
+  <tabstop>graphicsView_sg_scale</tabstop>
+  <tabstop>graphicsView_sg_disp</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
