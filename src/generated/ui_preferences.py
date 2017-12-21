@@ -8,17 +8,17 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        Dialog.setObjectName("Dialog")
-        Dialog.setWindowModality(QtCore.Qt.ApplicationModal)
-        Dialog.resize(407, 304)
+class Ui_DlgPreferences(object):
+    def setupUi(self, DlgPreferences):
+        DlgPreferences.setObjectName("DlgPreferences")
+        DlgPreferences.setWindowModality(QtCore.Qt.ApplicationModal)
+        DlgPreferences.resize(422, 310)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("://images/22x22/pfft-logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        Dialog.setWindowIcon(icon)
-        self.verticalLayout = QtWidgets.QVBoxLayout(Dialog)
+        DlgPreferences.setWindowIcon(icon)
+        self.verticalLayout = QtWidgets.QVBoxLayout(DlgPreferences)
         self.verticalLayout.setObjectName("verticalLayout")
-        self.tabWidget = QtWidgets.QTabWidget(Dialog)
+        self.tabWidget = QtWidgets.QTabWidget(DlgPreferences)
         self.tabWidget.setObjectName("tabWidget")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
@@ -27,21 +27,21 @@ class Ui_Dialog(object):
         self.tab_2.setObjectName("tab_2")
         self.tabWidget.addTab(self.tab_2, "")
         self.verticalLayout.addWidget(self.tabWidget)
-        self.buttonBox = QtWidgets.QDialogButtonBox(Dialog)
+        self.buttonBox = QtWidgets.QDialogButtonBox(DlgPreferences)
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
         self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Apply|QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
         self.verticalLayout.addWidget(self.buttonBox)
 
-        self.retranslateUi(Dialog)
-        self.buttonBox.accepted.connect(Dialog.accept)
-        self.buttonBox.rejected.connect(Dialog.reject)
-        QtCore.QMetaObject.connectSlotsByName(Dialog)
+        self.retranslateUi(DlgPreferences)
+        self.buttonBox.accepted.connect(DlgPreferences.accept)
+        self.buttonBox.rejected.connect(DlgPreferences.reject)
+        QtCore.QMetaObject.connectSlotsByName(DlgPreferences)
 
-    def retranslateUi(self, Dialog):
+    def retranslateUi(self, DlgPreferences):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Preferences - Pfft"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("Dialog", "Tab 1"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("Dialog", "Tab 2"))
+        DlgPreferences.setWindowTitle(_translate("DlgPreferences", "Preferences - Pfft"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("DlgPreferences", "Tab 1"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("DlgPreferences", "Tab 2"))
 
 import resources_rc

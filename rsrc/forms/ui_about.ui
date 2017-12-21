@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>DlgAbout</class>
+ <widget class="QDialog" name="DlgAbout">
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>
@@ -69,7 +69,7 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-image: url(resources/images/pfft-logo.png)</string>
+      <string notr="true">background-image: url(rsrc/images/pfft-logo.png)</string>
      </property>
     </widget>
    </item>
@@ -163,5 +163,22 @@
  <resources>
   <include location="../resources.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>DlgAbout</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>341</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>342</x>
+     <y>171</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

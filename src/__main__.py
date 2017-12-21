@@ -1,15 +1,16 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from generated.ui_mainwindow import Ui_MainWindow
 
+from PyQt5.QtCore import QCoreApplication
+from PyQt5.QtWidgets import QApplication
 
-class MainWindow(QMainWindow, Ui_MainWindow):
-    def __init__(self):
-        super(MainWindow, self).__init__()
-        self.setupUi(self)
+from main_window import MainWindow
 
 
 def main():
+    # Set these here so we can use the default QSettings constructor everywhere else
+    QCoreApplication.setOrganizationName("pfft")
+    QCoreApplication.setApplicationName("pfft")
+
     app = QApplication(sys.argv)
     main_window = MainWindow()
     main_window.show()

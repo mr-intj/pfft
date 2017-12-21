@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>DlgPreferences</class>
+ <widget class="QDialog" name="DlgPreferences">
   <property name="windowModality">
    <enum>Qt::ApplicationModal</enum>
   </property>
@@ -9,15 +9,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>407</width>
-    <height>304</height>
+    <width>422</width>
+    <height>310</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Preferences - Pfft</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../resources.qrc">
+   <iconset>
     <normaloff>://images/22x22/pfft-logo.png</normaloff>://images/22x22/pfft-logo.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -54,7 +54,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>DlgPreferences</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -70,7 +70,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>Dialog</receiver>
+   <receiver>DlgPreferences</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

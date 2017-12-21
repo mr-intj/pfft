@@ -139,7 +139,14 @@
      <property name="title">
       <string>Open Recent</string>
      </property>
-     <addaction name="actionFile_OpenRecent"/>
+     <addaction name="actionFile_OpenRecent_1"/>
+     <addaction name="actionFile_OpenRecent_2"/>
+     <addaction name="actionFile_OpenRecent_3"/>
+     <addaction name="actionFile_OpenRecent_4"/>
+     <addaction name="actionFile_OpenRecent_5"/>
+     <addaction name="actionFile_OpenRecent_6"/>
+     <addaction name="actionFile_OpenRecent_7"/>
+     <addaction name="actionFile_OpenRecent_8"/>
      <addaction name="separator"/>
      <addaction name="actionFile_OpenRecent_Clear"/>
     </widget>
@@ -152,9 +159,7 @@
     <addaction name="separator"/>
     <addaction name="actionFile_Close"/>
     <addaction name="separator"/>
-    <addaction name="actionFile_PrintPreview"/>
     <addaction name="actionFile_Print"/>
-    <addaction name="separator"/>
     <addaction name="actionFile_Properties"/>
     <addaction name="separator"/>
     <addaction name="actionFile_Quit"/>
@@ -194,7 +199,7 @@
      <addaction name="actionView_Zoom_ZoomOut"/>
      <addaction name="actionView_Zoom_ZoomIn"/>
      <addaction name="actionView_Zoom_Fit"/>
-     <addaction name="actionView_Zoom_ZoomToSelection"/>
+     <addaction name="actionView_Zoom_ZoomToSel"/>
      <addaction name="separator"/>
      <addaction name="actionView_Zoom_Other"/>
     </widget>
@@ -207,6 +212,7 @@
     </widget>
     <addaction name="menuToolbars"/>
     <addaction name="menuZoom"/>
+    <addaction name="separator"/>
     <addaction name="actionView_FullScreen"/>
     <addaction name="separator"/>
     <addaction name="actionView_StatusBar"/>
@@ -250,10 +256,13 @@
   <action name="actionFile_New">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/document-new.png</normaloff>://images/32x32/document-new.png</iconset>
+     <normaloff>://images/32x32/file-new.png</normaloff>://images/32x32/file-new.png</iconset>
    </property>
    <property name="text">
     <string>New</string>
+   </property>
+   <property name="statusTip">
+    <string>Create a new, blank audio file</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
@@ -262,18 +271,21 @@
   <action name="actionFile_Open">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/document-open.png</normaloff>://images/32x32/document-open.png</iconset>
+     <normaloff>://images/32x32/file-open.png</normaloff>://images/32x32/file-open.png</iconset>
    </property>
    <property name="text">
     <string>Open...</string>
+   </property>
+   <property name="statusTip">
+    <string>Open an existing audio file</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
    </property>
   </action>
-  <action name="actionFile_OpenRecent">
+  <action name="actionFile_OpenRecent_1">
    <property name="text">
-    <string>(dynamic)</string>
+    <string>&amp;1 (dynamic)</string>
    </property>
    <property name="toolTip">
     <string>(dynamic)</string>
@@ -287,14 +299,20 @@
    <property name="text">
     <string>Clear History</string>
    </property>
+   <property name="statusTip">
+    <string>Clear the recently used file history</string>
+   </property>
   </action>
   <action name="actionFile_Save">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/document-save.png</normaloff>://images/32x32/document-save.png</iconset>
+     <normaloff>://images/32x32/file-save.png</normaloff>://images/32x32/file-save.png</iconset>
    </property>
    <property name="text">
     <string>Save</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the current audio file</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
@@ -303,10 +321,13 @@
   <action name="actionFile_SaveAs">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/document-save-as.png</normaloff>://images/32x32/document-save-as.png</iconset>
+     <normaloff>://images/32x32/file-save-as.png</normaloff>://images/32x32/file-save-as.png</iconset>
    </property>
    <property name="text">
     <string>Save As...</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the current audio file with a new name</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+S</string>
@@ -315,10 +336,13 @@
   <action name="actionFile_Close">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/document-close.png</normaloff>://images/32x32/document-close.png</iconset>
+     <normaloff>://images/32x32/file-close.png</normaloff>://images/32x32/file-close.png</iconset>
    </property>
    <property name="text">
     <string>Close</string>
+   </property>
+   <property name="statusTip">
+    <string>Close the current audio file</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+W</string>
@@ -327,7 +351,7 @@
   <action name="actionFile_PrintPreview">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/document-print-preview.png</normaloff>://images/32x32/document-print-preview.png</iconset>
+     <normaloff>://images/32x32/file-printpreview.png</normaloff>://images/32x32/file-printpreview.png</iconset>
    </property>
    <property name="text">
     <string>Print Preview</string>
@@ -336,10 +360,13 @@
   <action name="actionFile_Print">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/document-print.png</normaloff>://images/32x32/document-print.png</iconset>
+     <normaloff>://images/32x32/file-print.png</normaloff>://images/32x32/file-print.png</iconset>
    </property>
    <property name="text">
     <string>Print...</string>
+   </property>
+   <property name="statusTip">
+    <string>Print the current audio file</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+P</string>
@@ -348,10 +375,13 @@
   <action name="actionFile_Properties">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/document-properties.png</normaloff>://images/32x32/document-properties.png</iconset>
+     <normaloff>://images/32x32/file-properties.png</normaloff>://images/32x32/file-properties.png</iconset>
    </property>
    <property name="text">
     <string>Properties</string>
+   </property>
+   <property name="statusTip">
+    <string>View current audio file metadata</string>
    </property>
    <property name="shortcut">
     <string>Alt+Return</string>
@@ -360,10 +390,13 @@
   <action name="actionFile_Quit">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/application-quit.png</normaloff>://images/32x32/application-quit.png</iconset>
+     <normaloff>://images/32x32/file-quit.png</normaloff>://images/32x32/file-quit.png</iconset>
    </property>
    <property name="text">
     <string>Quit</string>
+   </property>
+   <property name="statusTip">
+    <string>Quit the application</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
@@ -377,6 +410,9 @@
    <property name="text">
     <string>Undo</string>
    </property>
+   <property name="statusTip">
+    <string>Undo the last action</string>
+   </property>
    <property name="shortcut">
     <string>Ctrl+Z</string>
    </property>
@@ -388,6 +424,9 @@
    </property>
    <property name="text">
     <string>Redo</string>
+   </property>
+   <property name="statusTip">
+    <string>Redo the previously undone action</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Y</string>
@@ -401,6 +440,9 @@
    <property name="text">
     <string>Cut</string>
    </property>
+   <property name="statusTip">
+    <string>Cut the selection and put it on the clipboard</string>
+   </property>
    <property name="shortcut">
     <string>Ctrl+X</string>
    </property>
@@ -412,6 +454,9 @@
    </property>
    <property name="text">
     <string>Copy</string>
+   </property>
+   <property name="statusTip">
+    <string>Copy the selection and put it on the clipboard</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+C</string>
@@ -425,6 +470,9 @@
    <property name="text">
     <string>Paste</string>
    </property>
+   <property name="statusTip">
+    <string>Insert clipboard contents</string>
+   </property>
    <property name="shortcut">
     <string>Ctrl+V</string>
    </property>
@@ -432,10 +480,13 @@
   <action name="actionEdit_Delete">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/edit-clear.png</normaloff>://images/32x32/edit-clear.png</iconset>
+     <normaloff>://images/32x32/file-openrecent-clear.png</normaloff>://images/32x32/file-openrecent-clear.png</iconset>
    </property>
    <property name="text">
     <string>Delete</string>
+   </property>
+   <property name="statusTip">
+    <string>Erase the selection</string>
    </property>
    <property name="shortcut">
     <string>Del</string>
@@ -449,6 +500,9 @@
    <property name="text">
     <string>Preferences</string>
    </property>
+   <property name="statusTip">
+    <string>View and edit application preferences</string>
+   </property>
   </action>
   <action name="actionSelect_All">
    <property name="icon">
@@ -457,6 +511,9 @@
    </property>
    <property name="text">
     <string>All</string>
+   </property>
+   <property name="statusTip">
+    <string>Select the entire audio file</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+A</string>
@@ -470,6 +527,9 @@
    <property name="text">
     <string>None</string>
    </property>
+   <property name="statusTip">
+    <string>Remove any selection</string>
+   </property>
    <property name="shortcut">
     <string>Ctrl+Shift+A</string>
    </property>
@@ -482,6 +542,9 @@
    <property name="text">
     <string>Invert</string>
    </property>
+   <property name="statusTip">
+    <string>Invert the selection</string>
+   </property>
    <property name="shortcut">
     <string>Ctrl+I</string>
    </property>
@@ -493,6 +556,12 @@
    <property name="text">
     <string>Default</string>
    </property>
+   <property name="statusTip">
+    <string>Show or hide the default toolbar</string>
+   </property>
+   <property name="whatsThis">
+    <string>Toggle visibility of the default toolbar</string>
+   </property>
   </action>
   <action name="actionView_Toolbar_Editing">
    <property name="checkable">
@@ -500,6 +569,12 @@
    </property>
    <property name="text">
     <string>Editing</string>
+   </property>
+   <property name="statusTip">
+    <string>Show or hide the editing toolbar</string>
+   </property>
+   <property name="whatsThis">
+    <string>Toggle visibility of the editing toolbar</string>
    </property>
   </action>
   <action name="actionView_FullScreen">
@@ -509,6 +584,9 @@
    </property>
    <property name="text">
     <string>Full Screen</string>
+   </property>
+   <property name="statusTip">
+    <string>Toggle main window between normal and full screen mode</string>
    </property>
    <property name="shortcut">
     <string>F11</string>
@@ -521,6 +599,12 @@
    <property name="text">
     <string>Status Bar</string>
    </property>
+   <property name="statusTip">
+    <string>Toggle visibility of the status bar</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
   </action>
   <action name="actionView_Grid">
    <property name="checkable">
@@ -529,22 +613,38 @@
    <property name="text">
     <string>Grid</string>
    </property>
+   <property name="statusTip">
+    <string>Toggle visibility of the grid</string>
+   </property>
   </action>
   <action name="actionView_Zoom_ZoomIn">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/zoom-out.png</normaloff>://images/32x32/zoom-out.png</iconset>
+     <normaloff>://images/32x32/view-zoom-zoomout.png</normaloff>://images/32x32/view-zoom-zoomout.png</iconset>
    </property>
    <property name="text">
     <string>Zoom In</string>
+   </property>
+   <property name="statusTip">
+    <string>Increase the zoom level to see more detail</string>
    </property>
    <property name="shortcut">
     <string>Ctrl++</string>
    </property>
   </action>
   <action name="actionView_Zoom_Reset">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/images/32x32/view-zoom-reset.png</normaloff>:/images/32x32/view-zoom-reset.png</iconset>
+   </property>
    <property name="text">
-    <string>Reset (1:1)</string>
+    <string>Reset</string>
+   </property>
+   <property name="statusTip">
+    <string>Reset zoom level to the default (1:1)</string>
+   </property>
+   <property name="whatsThis">
+    <string>Reset zoom</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+0</string>
@@ -553,10 +653,13 @@
   <action name="actionView_Zoom_ZoomOut">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/zoom-out.png</normaloff>://images/32x32/zoom-out.png</iconset>
+     <normaloff>://images/32x32/view-zoom-zoomout.png</normaloff>://images/32x32/view-zoom-zoomout.png</iconset>
    </property>
    <property name="text">
     <string>Zoom Out</string>
+   </property>
+   <property name="statusTip">
+    <string>Reduce the zoom level to see more of the audio file</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+-</string>
@@ -565,24 +668,39 @@
   <action name="actionView_Zoom_Fit">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/zoom-fit.png</normaloff>://images/32x32/zoom-fit.png</iconset>
+     <normaloff>://images/32x32/view-zoom-fit.png</normaloff>://images/32x32/view-zoom-fit.png</iconset>
    </property>
    <property name="text">
     <string>Fit</string>
    </property>
+   <property name="statusTip">
+    <string>Zoom in or out to fit the entire audio file in the window</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
   </action>
-  <action name="actionView_Zoom_ZoomToSelection">
+  <action name="actionView_Zoom_ZoomToSel">
    <property name="text">
     <string>Zoom to Selection</string>
+   </property>
+   <property name="statusTip">
+    <string>Zoom in or out to fit the selection in the window</string>
+   </property>
+   <property name="whatsThis">
+    <string/>
    </property>
   </action>
   <action name="actionView_Zoom_Other">
    <property name="icon">
     <iconset>
-     <normaloff>://images/32x32/zoom-other.png</normaloff>://images/32x32/zoom-other.png</iconset>
+     <normaloff>://images/32x32/view-zoom-other.png</normaloff>://images/32x32/view-zoom-other.png</iconset>
    </property>
    <property name="text">
     <string>Other...</string>
+   </property>
+   <property name="statusTip">
+    <string>Specify a custom zoom amount</string>
    </property>
   </action>
   <action name="actionHelp_About">
@@ -592,6 +710,63 @@
    </property>
    <property name="text">
     <string>About</string>
+   </property>
+   <property name="statusTip">
+    <string>Display program information, version number and copyright</string>
+   </property>
+  </action>
+  <action name="actionImport_Image">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/images/32x32/file-import.png</normaloff>:/images/32x32/file-import.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Image...</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_2">
+   <property name="text">
+    <string>&amp;2 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_3">
+   <property name="text">
+    <string>&amp;3 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_4">
+   <property name="text">
+    <string>&amp;4 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_5">
+   <property name="text">
+    <string>&amp;5 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_6">
+   <property name="text">
+    <string>&amp;6 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_7">
+   <property name="text">
+    <string>&amp;7 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_8">
+   <property name="text">
+    <string>&amp;8 (dynamic)</string>
+   </property>
+  </action>
+  <action name="action_9_dynamic">
+   <property name="text">
+    <string>&amp;9 (dynamic)</string>
+   </property>
+  </action>
+  <action name="action_0_dynamic">
+   <property name="text">
+    <string>&amp;0 (dynamic)</string>
    </property>
   </action>
  </widget>
@@ -608,4 +783,7 @@
   <include location="../resources.qrc"/>
  </resources>
  <connections/>
+ <slots>
+  <slot>on_help_about()</slot>
+ </slots>
 </ui>
