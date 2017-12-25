@@ -287,8 +287,40 @@
    <property name="text">
     <string>&amp;1 (dynamic)</string>
    </property>
-   <property name="toolTip">
-    <string>(dynamic)</string>
+  </action>
+  <action name="actionFile_OpenRecent_2">
+   <property name="text">
+    <string>&amp;2 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_3">
+   <property name="text">
+    <string>&amp;3 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_4">
+   <property name="text">
+    <string>&amp;4 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_5">
+   <property name="text">
+    <string>&amp;5 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_6">
+   <property name="text">
+    <string>&amp;6 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_7">
+   <property name="text">
+    <string>&amp;7 (dynamic)</string>
+   </property>
+  </action>
+  <action name="actionFile_OpenRecent_8">
+   <property name="text">
+    <string>&amp;8 (dynamic)</string>
    </property>
   </action>
   <action name="actionFile_OpenRecent_Clear">
@@ -346,15 +378,6 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+W</string>
-   </property>
-  </action>
-  <action name="actionFile_PrintPreview">
-   <property name="icon">
-    <iconset>
-     <normaloff>://images/32x32/file-printpreview.png</normaloff>://images/32x32/file-printpreview.png</iconset>
-   </property>
-   <property name="text">
-    <string>Print Preview</string>
    </property>
   </action>
   <action name="actionFile_Print">
@@ -713,60 +736,6 @@
    </property>
    <property name="statusTip">
     <string>Display program information, version number and copyright</string>
-   </property>
-  </action>
-  <action name="actionImport_Image">
-   <property name="icon">
-    <iconset resource="../resources.qrc">
-     <normaloff>:/images/32x32/file-import.png</normaloff>:/images/32x32/file-import.png</iconset>
-   </property>
-   <property name="text">
-    <string>Import Image...</string>
-   </property>
-  </action>
-  <action name="actionFile_OpenRecent_2">
-   <property name="text">
-    <string>&amp;2 (dynamic)</string>
-   </property>
-  </action>
-  <action name="actionFile_OpenRecent_3">
-   <property name="text">
-    <string>&amp;3 (dynamic)</string>
-   </property>
-  </action>
-  <action name="actionFile_OpenRecent_4">
-   <property name="text">
-    <string>&amp;4 (dynamic)</string>
-   </property>
-  </action>
-  <action name="actionFile_OpenRecent_5">
-   <property name="text">
-    <string>&amp;5 (dynamic)</string>
-   </property>
-  </action>
-  <action name="actionFile_OpenRecent_6">
-   <property name="text">
-    <string>&amp;6 (dynamic)</string>
-   </property>
-  </action>
-  <action name="actionFile_OpenRecent_7">
-   <property name="text">
-    <string>&amp;7 (dynamic)</string>
-   </property>
-  </action>
-  <action name="actionFile_OpenRecent_8">
-   <property name="text">
-    <string>&amp;8 (dynamic)</string>
-   </property>
-  </action>
-  <action name="action_9_dynamic">
-   <property name="text">
-    <string>&amp;9 (dynamic)</string>
-   </property>
-  </action>
-  <action name="action_0_dynamic">
-   <property name="text">
-    <string>&amp;0 (dynamic)</string>
    </property>
   </action>
  </widget>
